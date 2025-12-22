@@ -1,0 +1,198 @@
+.test-page {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.test-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.test-level.beginner {
+    display: inline-block;
+    background: #00acc1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.test-header h1 {
+    font-size: 58px;
+    color: #142D4B;
+    margin-bottom: 30px;
+}
+
+.test-description {
+    font-size: 24px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.test-info {
+    font-size: 20px;
+    color: #888;
+}
+
+.quiz-form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.question {
+    background: #FEFEFE;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.question-text {
+    font-size: 24px;
+    color: #142D4B;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.question label {
+    display: block;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+}
+
+.question label input {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+.question label span {
+    display: block;
+    padding-left: 10px;
+}
+
+.btn-submit-large {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 60px auto 0;
+    padding: 20px;
+    font-size: 26px;
+    background: #F5B237;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn-submit-large:hover {
+    background: #e0a22c;
+}
+
+.test-result {
+    text-align: center;
+    background: #FEFEFE;
+    border: 4px solid #F5B237;
+    border-radius: 40px;
+    padding: 60px;
+    max-width: 800px;
+    margin: 80px auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.test-result h2 {
+    font-size: 50px;
+    color: #142D4B;
+    margin-bottom: 30px;
+}
+
+.test-result p {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.btn-try-again {
+    background: #142D4B;
+    color: white;
+    padding: 18px 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn-try-again:hover {
+    background: #0a1f44;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .test-header h1 {
+        font-size: 42px;
+    }
+    
+    .question {
+        padding: 30px;
+    }
+    
+    .question-text {
+        font-size: 22px;
+    }
+    
+    .question label {
+        font-size: 18px;
+    }
+    
+    .test-result h2 {
+        font-size: 40px;
+    }
+    
+    .test-result p {
+        font-size: 24px;
+    }
+}
+/* Стильная компактная кнопка "Назад" */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0px;                                    /* Как ты хотел — без отступа между стрелкой и текстом */
+    background: #F5B237;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: -10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(245, 178, 55, 0.3);
+    position: relative;                          /* Нужно для ::before */
+    padding-left: 52px;                          /* Место под стрелку слева */
+}
+
+.btn-back:hover {
+    background: #e0a22c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(245, 178, 55, 0.4);
+}
+
+/* Одна стрелочка слева — твои стили */
+.btn-back::before {
+    content: '←';
+    position: absolute;
+    left: 20px;
+    top: 46%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    line-height: 1;
+}

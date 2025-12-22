@@ -1,0 +1,752 @@
+/* Free Course Hero Section */
+.free-course-hero {
+    padding: 120px 0 160px;
+    background: #fff;
+    text-align: center;
+}
+
+.free-course-badge {
+    font-size: 24px;
+    color: #747272;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.free-course-hero h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #142D4B;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.free-course-subtitle {
+    font-size: 28px;
+    color: #747272;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Program Section */
+.free-course-program {
+    padding: 140px 0 110px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.free-course-program h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    padding-left: 40px;
+}
+
+.accent-title {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+}
+
+.program-subtitle {
+    font-size: 28px;
+    color: #747272;
+    font-weight: 300;
+    margin-bottom: 80px;
+    padding-left: 40px;
+}
+
+/* Оранжевый полукруг справа сверху — только на десктопе */
+.free-course-decor-semicircle {
+    position: absolute;
+    top: 160px;
+    right: -294px;
+    width: 500px;
+    height: 500px;
+    background: #F5B237;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Сетка уроков */
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.lesson-large {
+    grid-column: span 4;
+}
+
+.lesson-small {
+    grid-column: span 3;
+}
+
+/* Общая стилизация карточки */
+.lesson-card {
+    background: #FEFEFE;
+    border-radius: 30px;
+    padding: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000;
+}
+
+.lesson-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+}
+
+.lesson-card p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.lesson-start {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.btn-lesson {
+    background: #000;
+    color: white;
+    padding: 14px 40px;
+    font-size: 20px;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+/* Оранжевая полоска снизу — только на десктопе */
+.free-course-decor-line {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    height: 20px;
+    background: #F5B237;
+    z-index: 1;
+}
+
+/* After Course Section */
+.after-course {
+    padding: 140px 0;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.after-course-badge {
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 24px;
+    color: #666666;
+    font-weight: 300;
+    margin-bottom: 60px;
+    margin-left: 45px;
+}
+
+.after-course-items {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.after-course-item {
+    position: relative;
+    padding-top: 40px;
+    margin-bottom: 60px;
+}
+
+.after-course-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #F5B237;
+}
+
+.after-course-item-last::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #F5B237;
+}
+
+.after-course-item h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #142D4B;
+    line-height: 1.4;
+    max-width: 800px;
+}
+
+/* Оранжевый полукруг слева снизу — только на десктопе */
+.after-course-decor-semicircle {
+    position: absolute;
+    bottom: 0px;
+    left: -300px;
+    width: 550px;
+    height: 550px;
+    background: #F5B237;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Website Components Section */
+.website-components {
+    padding: 20px 0;
+    background: #fff;
+}
+
+.website-components-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 80px;
+    padding: 0 40px;
+}
+
+.website-components-image {
+    flex-shrink: 0;
+    order: 2;
+}
+
+.website-components-image img {
+    width: 350px;
+    height: auto;
+}
+
+.website-components-content {
+    flex: 1;
+    order: 1;
+}
+
+.website-components h2 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.components-subtitle {
+    font-size: 22px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 80px;
+    padding: 0 40px;
+}
+
+.component-item h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 15px;
+}
+
+.component-item p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Code Snippets Section */
+.code-snippets {
+    padding: 140px 0;
+    background: #ffffff;
+}
+
+.code-snippets h2 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.code-subtitle {
+    font-size: 24px;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 80px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Сетка 2 колонки на десктопе, 1 на планшете/мобильном */
+.snippets-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.snippet-card {
+    background: #fefefe;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border: 3px solid #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.snippet-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Блок кода — базовый стиль */
+.snippet-card pre {
+    background: #000;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.snippet-card code {
+    font-family: 'Courier New', monospace;
+}
+
+/* Кнопка копирования */
+.btn-copy {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #F5B237;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-copy:hover {
+    background: #142D4B;
+    transform: scale(1.1);
+}
+
+.btn-copy svg {
+    stroke: white;
+}
+
+/* Модальное окно для видео */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.video-close:hover {
+    background: #F5B237;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Адаптив */
+@media (max-width: 1400px) {
+    .lessons-grid {
+        grid-template-columns: repeat(9, 1fr);
+    }
+    .lesson-large {
+        grid-column: span 3;
+    }
+    .lesson-small {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 1200px) {
+    .after-course-items {
+        margin-right: 20px;
+        max-width: 800px;
+    }
+    .website-components-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .website-components-image {
+        order: -1;
+        margin-bottom: 40px;
+    }
+    .website-components-image img {
+        width: 300px;
+    }
+    .components-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .lessons-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .lesson-large, .lesson-small {
+        grid-column: span 3;
+    }
+}
+
+/* Планшет: убираем только круги + увеличиваем высоту карточек кода */
+@media (max-width: 1024px) {
+    .free-course-decor-semicircle,
+    .after-course-decor-semicircle {
+        display: none;
+    }
+
+    .snippets-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .snippet-card {
+        padding: 30px;
+        max-height: 450px; /* Больше высота на планшете */
+    }
+
+    .snippet-card h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .snippet-card pre {
+        font-size: 13px;
+        padding: 18px;
+        line-height: 1.4;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 360px;
+    }
+
+    .btn-copy {
+        width: 38px;
+        height: 38px;
+        top: 18px;
+        right: 18px;
+    }
+}
+
+/* Мобильный: убираем все декоры + ещё больше высота карточек кода */
+@media (max-width: 768px) {
+    .free-course-decor-semicircle,
+    .after-course-decor-semicircle,
+    .free-course-decor-line {
+        display: none;
+    }
+
+    .free-course-hero {
+        padding: 80px 0 100px;
+    }
+
+    .free-course-hero h1 {
+        font-size: 48px;
+    }
+
+    .free-course-subtitle {
+        font-size: 20px;
+    }
+
+    .free-course-program {
+        padding: 80px 0;
+    }
+
+    .free-course-program h2, .accent-title {
+        font-size: 42px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .program-subtitle {
+        font-size: 20px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .lessons-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .lesson-large, .lesson-small {
+        grid-column: 1 / -1;
+    }
+
+    .lesson-card {
+        padding: 30px 20px;
+    }
+
+    .lesson-card h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .lesson-card p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .btn-lesson {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .after-course {
+        padding: 80px 0;
+    }
+
+    .after-course-badge {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-left: 20px;
+    }
+
+    .after-course-items {
+        margin: 0 20px;
+    }
+
+    .after-course-item h3 {
+        font-size: 26px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .after-course-item-last::after {
+        bottom: -40px;
+    }
+
+    .website-components {
+        padding: 60px 0;
+    }
+
+    .website-components-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .website-components-image {
+        order: -1;
+    }
+
+    .website-components-image img {
+        width: 250px;
+    }
+
+    .website-components h2 {
+        font-size: 42px;
+    }
+
+    .components-subtitle {
+        font-size: 18px;
+    }
+
+    .components-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .component-item h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .component-item p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Блоки кода — больше по высоте на мобильном */
+    .code-snippets {
+        padding: 80px 0;
+    }
+
+    .code-snippets h2 {
+        font-size: 42px;
+        padding: 0 20px;
+    }
+
+    .code-subtitle {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .snippets-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .snippet-card {
+        padding: 30px;
+        max-height: 400px; /* Больше высота на мобильном */
+    }
+
+    .snippet-card h3 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .snippet-card pre {
+        font-size: 11px;
+        padding: 16px;
+        line-height: 1.3;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 320px;
+    }
+
+    .btn-copy {
+        width: 36px;
+        height: 36px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .free-course-hero h1 {
+        font-size: 36px;
+    }
+
+    .free-course-subtitle {
+        font-size: 18px;
+    }
+
+    .lesson-card h3 {
+        font-size: 24px;
+    }
+
+    .after-course-item h3 {
+        font-size: 24px;
+    }
+
+    .website-components h2 {
+        font-size: 36px;
+    }
+
+    .code-snippets h2 {
+        font-size: 36px;
+    }
+
+    .snippet-card {
+        max-height: 380px;
+    }
+
+    .snippet-card h3 {
+        font-size: 20px;
+    }
+
+    .snippet-card pre {
+        font-size: 10px;
+        padding: 14px;
+        max-height: 300px;
+    }
+}

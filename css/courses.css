@@ -1,0 +1,728 @@
+/* Courses Hero Section */
+.courses-hero {
+    padding: 80px 0 110px;
+    background: #fff;
+}
+
+.courses-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.courses-hero-content {
+    flex: 1 1 45%;
+    max-width: 700px;
+}
+
+.courses-hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.courses-hero p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #747272;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.courses-hero-image {
+    flex: 1 1 55%;
+    text-align: center;
+}
+
+.courses-hero-image img {
+    width: 120%;
+    max-width: none;
+    margin-left: -10%;
+}
+
+/* Programs Section */
+.courses-programs {
+    position: relative;
+    padding: 20px 0 0px;
+    background: #fff;
+    overflow: hidden;
+    min-height: 1200px;
+    margin-bottom: -37px;
+}
+
+/* Декоративные круги — только на десктопе */
+.courses-decor-semicircle-top {
+    position: absolute;
+    top: 50px;
+    right: -225px;
+    width: 450px;
+    height: 450px;
+    background: #F5B237;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.courses-decor-semicircle-bottom {
+    position: absolute;
+    bottom: -150px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    background: #F5B237;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.courses-programs h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.programs-subtitle {
+    font-size: 22px;
+    color: #666666;
+    max-width: 800px;
+    margin-bottom: 80px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.programs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    padding: 0 40px;
+}
+
+.program-row {
+    display: flex;
+    background: #FEFEFE;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.program-left, .program-right {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.program-level {
+    font-size: 18px;
+    color: #666666;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.program-left h3 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.program-duration {
+    font-size: 20px;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.program-right h4 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+}
+
+.program-right p {
+    font-size: 20px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* НОВОЕ: Контейнер для кнопок — на одной линии */
+.program-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* На очень узких экранах — в колонку */
+    margin-top: auto; /* Прижимает к низу, если есть свободное место */
+}
+
+.btn-program {
+    padding: 16px 50px;
+    font-size: 20px;
+    border-radius: 50px;
+    width: fit-content;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Цвета кнопок по курсам */
+.program-row:nth-child(1) { border: 4px solid #00acc1; }
+.program-row:nth-child(1) .btn-program { background: #00acc1; color: white; }
+.program-row:nth-child(2) { border: 4px solid #000; }
+.program-row:nth-child(2) .btn-program { background: #000; color: white; }
+.program-row:nth-child(3) { border: 4px solid #F5B237; }
+.program-row:nth-child(3) .btn-program { background: #F5B237; color: white; }
+
+.small-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1600px;
+    margin: 0 auto 120px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-card {
+    background: #FEFEFE;
+    border-radius: 30px;
+    padding: 50px 40px;
+    text-align: left;
+    border: 3px solid #000;
+}
+
+.small-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+}
+
+.small-card p {
+    font-size: 20px;
+    color: #666666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.small-card .start-text {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.small-card .btn-program {
+    background: #000;
+    color: white;
+    padding: 16px 50px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.courses-form-section {
+    position: relative;
+    text-align: center;
+    padding: 80px 40px 40px;
+    z-index: 2;
+}
+
+.courses-form-section h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.courses-form-section > p {
+    font-size: 22px;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.consult-form-wrapper {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    background: #fff;
+    padding: 60px 50px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border: 3px solid #ddd;
+}
+
+.form-field {
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.form-field label {
+    display: block;
+    font-size: 20px;
+    color: #142D4B;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.form-field input[type="email"] {
+    width: 100%;
+    padding: 18px 30px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 20px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.form-field select {
+    width: 100%;
+    padding: 18px 30px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 20px;
+    background: #f9f9f9;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666666' d='M1 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+    cursor: pointer;
+}
+
+.courses-form .btn-submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.consult-success-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    z-index: 10;
+}
+
+.consult-success-overlay.show {
+    display: flex;
+}
+
+.consult-success-content {
+    text-align: center;
+    max-width: 80%;
+}
+
+.consult-success-content h2 {
+    font-size: 50px;
+    color: #142D4B;
+    margin-bottom: 30px;
+}
+
+.consult-success-content p {
+    font-size: 26px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.consult-success-content strong {
+    color: #F5B237;
+    font-weight: 700;
+}
+
+.btn-close-consult {
+    background: #F5B237;
+    color: white;
+    padding: 18px 70px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background 0.3s;
+}
+
+.btn-close-consult:hover {
+    background: #e0a22c;
+}
+
+.courses-form select {
+    width: 100%;
+    padding: 20px 30px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 20px;
+    background: #f9f9f9;
+    margin-bottom: 40px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666666' d='M1 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+}
+
+.btn-submit {
+    background: #F5B237;
+    color: white;
+    padding: 18px 80px;
+    font-size: 24px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* ==================== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 45, 75, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal.show {
+    display: flex !important;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 60px 50px;
+    border-radius: 30px;
+    max-width: 520px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    animation: modalAppear 0.5s ease-out;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #aaa;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    background: #f0f0f0;
+    color: #142D4B;
+}
+
+.modal h2 {
+    font-size: 42px;
+    color: #142D4B;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    font-size: 22px;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="tel"] {
+    width: 100%;
+    padding: 20px 30px;
+    margin-bottom: 25px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 18px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.modal .btn-submit {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    margin-top: 10px;
+    background: #F5B237;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.modal .btn-submit:hover {
+    background: #e0a22c;
+}
+
+/* Успех в модалке */
+.success-message {
+    text-align: center;
+}
+
+.success-message h2 {
+    font-size: 50px;
+    color: #142D4B;
+    margin-bottom: 30px;
+}
+
+.success-message p {
+    font-size: 26px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.success-message strong {
+    color: #F5B237;
+    font-weight: 700;
+}
+
+.btn-close-success {
+    background: #F5B237;
+    color: white;
+    padding: 20px 70px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background 0.3s;
+}
+
+.btn-close-success:hover {
+    background: #e0a22c;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+    .courses-decor-semicircle-top,
+    .courses-decor-semicircle-bottom {
+        display: none;
+    }
+
+    .courses-hero {
+        padding: 60px 0 90px;
+    }
+
+    .courses-hero h1 {
+        font-size: 60px;
+    }
+
+    .program-row {
+        flex-direction: column;
+    }
+
+    .program-left, .program-right {
+        padding: 50px 40px;
+    }
+
+    .program-left h3 {
+        font-size: 36px;
+    }
+
+    .program-right h4 {
+        font-size: 30px;
+    }
+
+    .program-right p {
+        font-size: 18px;
+    }
+
+    .small-cards {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .small-card h3 {
+        font-size: 32px;
+    }
+
+    .small-card p {
+        font-size: 18px;
+    }
+
+    /* На планшете кнопки остаются на одной линии, но с меньшим gap */
+    .program-buttons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-hero {
+        padding: 50px 0 70px;
+    }
+
+    .courses-hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .courses-hero-image img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .courses-hero h1 {
+        font-size: 48px;
+    }
+
+    .courses-hero p {
+        font-size: 20px;
+    }
+
+    .courses-programs h2 {
+        font-size: 42px;
+        padding-left: 20px;
+    }
+
+    .programs-subtitle {
+        padding-left: 20px;
+        font-size: 18px;
+    }
+
+    .programs-grid {
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .program-left, .program-right {
+        padding: 40px 30px;
+    }
+
+    .program-left h3 {
+        font-size: 32px;
+    }
+
+    .program-right h4 {
+        font-size: 28px;
+    }
+
+    .program-right p {
+        font-size: 16px;
+    }
+
+    /* На мобильном кнопки на одной линии с маленьким gap */
+    .program-buttons {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .btn-program {
+        padding: 16px 40px;
+        font-size: 20px;
+    }
+
+    .small-cards {
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .small-card {
+        padding: 40px 30px;
+    }
+
+    .small-card h3 {
+        font-size: 28px;
+    }
+
+    .small-card p {
+        font-size: 16px;
+    }
+
+    .courses-form-section {
+        padding: 60px 20px 40px;
+    }
+
+    .courses-form-section h2 {
+        font-size: 42px;
+    }
+
+    .courses-form-section > p {
+        font-size: 18px;
+    }
+
+    .consult-form-wrapper {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-hero h1 {
+        font-size: 36px;
+    }
+
+    .program-left h3 {
+        font-size: 28px;
+    }
+
+    .program-right h4 {
+        font-size: 26px;
+    }
+
+    .program-right p {
+        font-size: 16px;
+    }
+
+    .small-card h3 {
+        font-size: 26px;
+    }
+
+    /* На очень маленьких экранах — кнопки в колонку */
+    .program-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-program {
+        width: 100%;
+        text-align: center;
+    }
+}

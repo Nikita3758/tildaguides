@@ -1,0 +1,526 @@
+/* Hero Section */
+.hero {
+    padding: 60px 0 140px;
+    background: #fff;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.hero-content {
+    flex: 1 1 45%;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 40px;
+    font-weight: 300;
+    color: #142D4B;
+    margin-bottom: 60px;
+    line-height: 1.4;
+}
+
+.btn-signup {
+    padding: 18px 50px;
+    font-size: 26px;
+}
+
+.hero-image {
+    flex: 1 1 55%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 110%;
+    max-width: none;
+    margin-left: -5%;
+}
+
+/* Benefits Section */
+.benefits {
+    position: relative;
+    padding: 27px 0 80px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.benefits h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: left;
+    margin-bottom: 100px;
+    line-height: 1.2;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+    max-width: 1600px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-item {
+    text-align: left;
+}
+
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.benefit-icon::after {
+    content: "✓";
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.benefit-item h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 20px;
+}
+
+.benefit-item p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #747272;
+    line-height: 1.6;
+}
+
+/* Декоративные элементы Benefits — только на десктопе */
+.benefits-decor-top {
+    position: absolute;
+    top: 0px;
+    left: 69px;
+    width: 200px;
+    height: 20px;
+    background: #F5B237;
+    z-index: 1;
+}
+
+.benefits-decor-semicircle {
+    position: absolute;
+    top: 1px;
+    right: -225px;
+    width: 430px;
+    height: 435px;
+    background: #F5B237;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.benefits-decor-bottom {
+    width: calc(100% - 80px);
+    max-width: 1600px;
+    height: 4px;
+    background: #F5B237;
+    margin-top: 55px;
+    margin-left: 40px;
+    z-index: 2;
+}
+
+/* About Section */
+.about {
+    padding: 15px 0 100px;
+    background: #fff;
+}
+
+.about-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.about-image {
+    flex: 1 1 50%;
+    max-width: 700px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.about-content {
+    flex: 1 1 50%;
+    max-width: 700px;
+    padding-left: 40px;
+}
+
+.about-content h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.about-text {
+    font-size: 22px;
+    font-weight: 400;
+    color: #747272;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Courses Preview Section */
+.courses-preview {
+    position: relative;
+    padding: 40px 0 80px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.courses-preview h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: left;
+    margin-bottom: 120px;
+    line-height: 1.2;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 120px;
+    max-width: 1800px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.course-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+}
+
+.course-card h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #142D4B;
+    padding: 40px 40px 25px;
+}
+
+.course-card p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #747272;
+    padding: 0 40px 50px;
+    line-height: 1.6;
+}
+
+/* Декоративный полукруг Courses — только на десктопе */
+.courses-decor-semicircle {
+    position: absolute;
+    top: 300px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    background: #F5B237;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Consultation Section */
+.consultation {
+    position: relative;
+    padding: 70px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.consultation h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: left;
+    margin-bottom: 100px;
+    line-height: 1.2;
+    padding-left: 40px;
+}
+
+.consultation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1600px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-card {
+    background: #f8f8f8;
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-icon.phone {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23142D4B"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.54-.56-.8-.28-1.68-.03-2.28.57l-2.14 2.14c-2.97-1.56-5.66-4.25-7.21-7.21l2.14-2.14c.6-.6.85-1.48.57-2.28-.36-1.12-.56-2.31-.56-3.54 0-.54-.44-.98-.98-.98h-3.5c-.54 0-.98.44-.98.98 0 9.42 7.66 17.08 17.08 17.08.54 0 .98-.44.98-.98v-3.5c0-.54-.44-.98-.98-.98z"/></svg>');
+}
+
+.contact-icon.email {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23142D4B"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>');
+}
+
+.contact-icon.messenger {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23142D4B"><path d="M12 2C6.48 2 2 6.48 2 12c0 3.24 1.53 6.14 3.91 8.09V22l3.54-1.97C10.11 20.68 11.03 21 12 21c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.71 13.29l-2.5-2.5-5 2.5 2.5-5 2.5 2.5 5-2.5-2.5 5z"/></svg>');
+}
+
+.contact-label {
+    font-size: 20px;
+    color: #747272;
+    margin-bottom: 10px;
+}
+
+.contact-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 30px;
+}
+
+.btn-contact {
+    padding: 14px 36px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+/* Декор Consultation — только на десктопе */
+.consultation-decor {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: #F5B237;
+    border-radius: 500px 0 0 0;
+    z-index: 1;
+}
+
+/* Адаптивность для главной */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 60px;
+    }
+    .hero p {
+        font-size: 32px;
+    }
+    .btn-signup {
+        padding: 18px 45px;
+        font-size: 24px;
+    }
+    .about-content h2 {
+        font-size: 56px;
+    }
+    .about-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-inner, .about-inner {
+        flex-direction: column;
+        text-align: left;
+    }
+    .hero-image, .about-image {
+        order: -1;
+        margin-bottom: 60px;
+    }
+    .hero-image img, .about-image img {
+        width: 100%;
+        margin-left: 0;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    .consultation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Мобильная версия — убираем все декоры */
+@media (max-width: 768px) {
+    .benefits-decor-top,
+    .benefits-decor-semicircle,
+    .benefits-decor-bottom,
+    .courses-decor-semicircle,
+    .consultation-decor {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 0 100px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 28px;
+    }
+
+    .btn-signup {
+        width: 100%;
+        text-align: center;
+    }
+
+    .benefits {
+        padding: 60px 0;
+    }
+
+    .benefits h2 {
+        font-size: 42px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 60px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 0 20px;
+    }
+
+    .benefit-item h3 {
+        font-size: 28px;
+    }
+
+    .benefit-item p {
+        font-size: 18px;
+    }
+
+    .about {
+        padding: 60px 0;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .about-text {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .courses-preview {
+        padding: 60px 0;
+    }
+
+    .courses-preview h2 {
+        font-size: 42px;
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 0 20px;
+    }
+
+    .course-card h3 {
+        font-size: 32px;
+        padding: 30px 30px 20px;
+    }
+
+    .course-card p {
+        font-size: 20px;
+        padding: 0 30px 40px;
+    }
+
+    .consultation {
+        padding: 60px 0;
+    }
+
+    .consultation h2 {
+        font-size: 42px;
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+
+    .consultation-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .contact-card {
+        padding: 40px 20px;
+    }
+}

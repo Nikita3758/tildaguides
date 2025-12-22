@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель — Tilda Guides</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="../js/main.js"></script>
+    <script src="../js/admin-tests.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.png" alt="Tilda Guides Logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="free-course.html">Бесплатный курс</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="tests.html">Тесты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth" id="authBlock">
+                    <!-- Заполняется main.js -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-panel">
+            <div class="container">
+                <h1>Админ-панель — Управление тестами</h1>
+
+                <button id="addTestBtn" class="btn-primary">Добавить новый тест</button>
+
+                <div id="testsList" class="items-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модалка для теста -->
+    <div id="testModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="testModalTitle">Добавить тест</h2>
+            <form id="testForm">
+                <input type="hidden" id="testIndex">
+
+                <div class="form-field">
+                    <label for="testTitle">Название теста</label>
+                    <input type="text" id="testTitle" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="testLevel">Уровень</label>
+                    <select id="testLevel" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div id="questionsContainer">
+                    <!-- Вопросы добавляются динамически -->
+                </div>
+
+                <button type="button" id="addQuestionBtn" class="btn-secondary">Добавить вопрос</button>
+
+                <button type="submit" class="btn-submit">Сохранить тест</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-column">
+                    <h4>УСЛУГИ</h4>
+                    <ul>
+                        <li><a href="#">Курсы по Tilda</a></li>
+                        <li><a href="#">Практические тесты</a></li>
+                        <li><a href="#">Подробные гайды</a></li>
+                        <li><a href="#">Руководства и задания</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>КОНТАКТЫ</h4>
+                    <ul>
+                        <li>Телефон: +375 (33) 222-37-37</li>
+                        <li>Email: tildaguides@gmail.com</li>
+                        <li>Адрес: ул. Ленинская 89, г. Могилев</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>МЫ В СОЦСЕТЯХ</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© TildaGuides 2025. Все права защищены</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

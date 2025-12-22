@@ -1,0 +1,304 @@
+/* Tests Hero Section — с твоим уменьшенным padding-bottom */
+.tests-hero {
+    padding: 80px 0 37px;   /* Твоё изменение — убрано лишнее пространство снизу */
+    background: #fff;
+}
+
+.tests-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.tests-hero-content {
+    flex: 1 1 50%;
+}
+
+.tests-hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.tests-hero p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #747272;
+    line-height: 1.5;
+    max-width: 550px;
+}
+
+/* Картинка — уменьшена и сбалансирована */
+.tests-hero-image {
+    flex: 1 1 50%;
+    text-align: right;
+}
+
+.tests-hero-image img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    margin-left: auto;
+    display: block;
+}
+
+/* Tests List Section */
+.tests-list {
+    position: relative;
+    padding: 80px 0 160px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Декоративные круги отключены */
+.tests-decor-top,
+.tests-decor-bottom {
+    display: none;
+}
+
+/* Заголовок и подзаголовок */
+.tests-list h2 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #142D4B;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.tests-subtitle {
+    font-size: 24px;
+    color: #666666;
+    max-width: 800px;
+    margin-bottom: 50px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Поиск и фильтр */
+.tests-controls {
+    display: flex;
+    gap: 30px;
+    margin: 0 40px 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 300px;
+    padding: 18px 30px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 20px;
+    background: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #F5B237;
+}
+
+.difficulty-filter {
+    padding: 18px 30px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 20px;
+    background: #f9f9f9;
+    cursor: pointer;
+    min-width: 220px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666666' d='M1 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+}
+
+/* Сетка тестов */
+.tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Карточки тестов — тонкая обводка 2px */
+.test-card {
+    background: #FEFEFE;
+    border-radius: 30px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.test-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Цвета по уровням сложности */
+.test-card[data-difficulty="beginner"] {
+    border-color: #00acc1;
+}
+
+.test-card[data-difficulty="beginner"] .btn-test {
+    background: #00acc1;
+}
+
+.test-card[data-difficulty="intermediate"] {
+    border-color: #000;
+}
+
+.test-card[data-difficulty="intermediate"] .btn-test {
+    background: #000;
+}
+
+.test-card[data-difficulty="advanced"] {
+    border-color: #F5B237;
+}
+
+.test-card[data-difficulty="advanced"] .btn-test {
+    background: #F5B237;
+}
+
+.test-card:hover .btn-test {
+    opacity: 0.9;
+}
+
+.test-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #142D4B;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.test-description {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.test-info {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.btn-test {
+    color: white;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-align: center;
+    align-self: flex-start;
+    transition: opacity 0.3s;
+    font-weight: 700;
+}
+
+/* Адаптив */
+@media (max-width: 1200px) {
+    .tests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .tests-hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .tests-hero-content {
+        order: 2;
+    }
+
+    .tests-hero-image {
+        order: 1;
+        text-align: center;
+    }
+
+    .tests-hero-image img {
+        width: 70%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .tests-hero h1 {
+        font-size: 56px;
+    }
+
+    .tests-hero p {
+        font-size: 22px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .tests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tests-list h2 {
+        font-size: 42px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .tests-subtitle {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .tests-controls {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0 20px 50px;
+    }
+
+    .search-input,
+    .difficulty-filter {
+        min-width: auto;
+    }
+
+    .test-card {
+        padding: 25px 20px;
+    }
+
+    .test-card h3 {
+        font-size: 26px;
+    }
+
+    .tests-hero h1 {
+        font-size: 48px;
+    }
+
+    .tests-hero p {
+        font-size: 20px;
+    }
+
+    .tests-hero-image img {
+        width: 80%;
+        max-width: 350px;
+    }
+}

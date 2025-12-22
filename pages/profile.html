@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — Tilda Guides</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.png" alt="Tilda Guides Logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="free-course.html">Бесплатный курс</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="tests.html">Тесты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth" id="authBlock">
+                    <!-- Заполняется JS -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-page">
+            <div class="container">
+                <div class="profile-header">
+                    <h1>Личный кабинет</h1>
+                    <p>Привет, <strong id="usernameDisplay"></strong>!</p>
+                </div>
+
+                <div class="profile-tests">
+                    <h2>Пройденные тесты</h2>
+                    <div id="testsList">
+                        <p class="no-tests">Вы ещё не прошли ни одного теста.</p>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="tests.html" class="btn-primary">Пройти тест</a>
+                    <button id="logoutBtn" class="btn-secondary">Выйти из аккаунта</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-column">
+                    <h4>УСЛУГИ</h4>
+                    <ul>
+                        <li><a href="#">Курсы по Tilda</a></li>
+                        <li><a href="#">Практические тесты</a></li>
+                        <li><a href="#">Подробные гайды</a></li>
+                        <li><a href="#">Руководства и задания</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>КОНТАКТЫ</h4>
+                    <ul>
+                        <li>Телефон: +375 (33) 222-37-37</li>
+                        <li>Email: tildaguides@gmail.com</li>
+                        <li>Адрес: ул. Ленинская 89, г. Могилев</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>МЫ В СОЦСЕТЯХ</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© TildaGuides 2025. Все права защищены</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = localStorage.getItem('currentUser');
+            const usernameDisplay = document.getElementById('usernameDisplay');
+            const testsList = document.getElementById('testsList');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if (!currentUser) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            usernameDisplay.textContent = currentUser;
+
+            // Загружаем результаты тестов
+            const testResults = JSON.parse(localStorage.getItem(`tests_${currentUser}`)) || [];
+
+            if (testResults.length === 0) {
+                testsList.innerHTML = '<p class="no-tests">Вы ещё не прошли ни одного теста.</p>';
+            } else {
+                testsList.innerHTML = '';
+                testResults.forEach(result => {
+                    const item = document.createElement('div');
+                    item.className = 'test-result-item';
+                    item.innerHTML = `
+                        <h3>${result.testName}</h3>
+                        <p>Результат: <strong>${result.score}/${result.total || 10}</strong> • Дата: ${new Date(result.date).toLocaleDateString('ru-RU')}</p>
+                    `;
+                    testsList.appendChild(item);
+                });
+            }
+
+            // Выход
+            logoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('currentUser');
+                window.location.href = '../index.html';
+            });
+        });
+    </script>
+
+</body>
+</html>

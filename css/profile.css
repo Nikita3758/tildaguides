@@ -1,0 +1,124 @@
+.profile-page {
+    padding: 100px 0;
+    background: #f9f9ff;
+    min-height: calc(100vh - 200px);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.profile-header h1 {
+    font-size: 58px;
+    color: #142D4B;
+    margin-bottom: 20px;
+}
+
+.profile-header p {
+    font-size: 28px;
+    color: #666;
+}
+
+.profile-tests {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.profile-tests h2 {
+    font-size: 42px;
+    color: #142D4B;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.no-tests {
+    text-align: center;
+    font-size: 24px;
+    color: #888;
+    font-style: italic;
+}
+
+.test-result-item {
+    padding: 30px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.test-result-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.test-result-item h3 {
+    font-size: 28px;
+    color: #142D4B;
+    margin-bottom: 10px;
+}
+
+.test-result-item p {
+    font-size: 20px;
+    color: #666;
+}
+
+.profile-actions {
+    text-align: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #F5B237;
+    color: white;
+    padding: 18px 50px;
+    font-size: 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e0a22c;
+}
+
+.btn-secondary {
+    background: #142D4B;
+    color: white;
+    padding: 18px 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #0a1f44;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .profile-header h1 {
+        font-size: 48px;
+    }
+    
+    .profile-tests {
+        padding: 40px 30px;
+    }
+    
+    .test-result-item h3 {
+        font-size: 24px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
